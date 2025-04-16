@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.event-page {
+    display: flex;
+}
+
+.event-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vh;
+    color: white;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+}
+
+#accra {
+    background-image: url('https://i.pinimg.com/736x/76/e8/d2/76e8d27e5dd7211b334a11a344d1dda8.jpg'); 
+}
+
+#nairobi {
+    background-image: url('https://i.pinimg.com/736x/f9/50/aa/f950aabc55e76ffa3c6bb7c04e5fdc2c.jpg'); 
+}
+
+#zanzibar {
+    background-image: url('https://i.pinimg.com/736x/ec/69/9c/ec699c4af722ae86fb6e684d6e5f737d.jpg'); 
+}
+
+.content {
+    max-width: 900px;
+}
+
+h2 {
+    font-size: 3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+#pavilion{
+    color: grey;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.details{
+    color: rgb(218, 171, 84);
+    font-size: 1em;
+}
+.nav-bar {
+    position: fixed;
+    bottom: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(6px);
+    border-radius: 30px;
+    padding: 0.8rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    flex-wrap: wrap;
+  }
+  
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.95rem;
+    padding: 1.4rem 1.9rem;
+    border-radius: 10px;
+    transition: 0.3s;
+  }
+  
+  .nav-links li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .nav-links .btn {
+    background-color: #111010;
+    font-weight: bold;
+  }
+  
+  .nav-icons {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.2rem;
+    color: #f4f4f4;
+  }
+
+
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+    .nav-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+      }
+    
+      .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    
+      .nav-icons {
+        margin-top: 1rem;
+      }
+
+}
+
+
