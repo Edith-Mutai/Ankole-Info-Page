@@ -31,27 +31,27 @@
   }
   
   .s1 {
-    background-image: url('https://i.pinimg.com/736x/2e/b0/33/2eb0336898648e83cdb8182c04e9b4e2.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('https://i.pinimg.com/736x/2e/b0/33/2eb0336898648e83cdb8182c04e9b4e2.jpg');
     animation-delay: 0s;
   }
   .s2 {
-    background-image: url('https://i.pinimg.com/736x/37/09/99/370999165ebdf2865671b05ac7a996ca.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('https://i.pinimg.com/736x/37/09/99/370999165ebdf2865671b05ac7a996ca.jpg');
     animation-delay: 6s;
   }
   .s3 {
-    background-image: url('https://i.pinimg.com/736x/f0/bb/8e/f0bb8e110e662dae3021fc8e0dbe39ac.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('https://i.pinimg.com/736x/f0/bb/8e/f0bb8e110e662dae3021fc8e0dbe39ac.jpg');
     animation-delay: 12s;
   }
   .s4 {
-    background-image: url('https://i.pinimg.com/736x/2e/b0/33/2eb0336898648e83cdb8182c04e9b4e2.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('https://i.pinimg.com/736x/2e/b0/33/2eb0336898648e83cdb8182c04e9b4e2.jpg');
     animation-delay: 0s;
   }
   .s5 {
-    background-image: url('https://i.pinimg.com/736x/37/09/99/370999165ebdf2865671b05ac7a996ca.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('https://i.pinimg.com/736x/37/09/99/370999165ebdf2865671b05ac7a996ca.jpg');
     animation-delay: 6s;
   }
   .s6 {
-    background-image: url('https://i.pinimg.com/736x/f0/bb/8e/f0bb8e110e662dae3021fc8e0dbe39ac.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('https://i.pinimg.com/736x/f0/bb/8e/f0bb8e110e662dae3021fc8e0dbe39ac.jpg');
     animation-delay: 12s;
   }
   
@@ -96,7 +96,7 @@
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(6px);
     border-radius: 30px;
-    padding: 1.8rem 1rem;
+    padding: 1.8rem 1.2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
