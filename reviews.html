@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ankole Reviews</title>
+  <link rel="stylesheet" href="reviews.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  
+</head>
+<body>
+  <div class="centered">
+    <a href="index.html"><div class="logo"></div></a>
+    <h1>Reviews</h1>
+    <div class="review-box" id="review-box">
+      <span class="quote">“</span>
+      <span class="review-content" id="review-content">
+        This place is run by educated, innovative & creative people! The architectural layout, seating, ambience, lighting, cutlery, service, design has been impeccably well thought out. Even the washrooms were excellent! The food was AWESOME! This is surprising considering the fact we were there on a Saturday night & they almost had no specials. We were extremely well serviced too! Rare to find such finesse in Kenya! You must go visit them!
+      </span>
+      <span class="quote">”</span>
+      <div class="reviewer" id="reviewer">Irfan Virji</div>
+      <div class="location" id="location">KITSURU</div>
+    </div>
+    <div class="nav-arrows">
+        <button id="prev-review" class="arrow-btn" aria-label="Previous review"><i class="fa-solid fa-arrow-left"></i></button>
+        <button id="next-review" class="arrow-btn" aria-label="Next review"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+  </div>
+
+  <nav class="nav-bar">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="live.html">Live</a></li>
+      <li><a href="contact.html">Contacts</a></li>
+      <li><a href="reservation.html">Reservations</a></li>
+
+    </ul>
+    <div class="nav-icons">
+      <a href="https://www.whatsapp.com/"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+    </div>
+  </nav>
+
+  <script>
+    const reviews = [
+      {
+        content: "This place is run by educated, innovative & creative people! The architectural layout, seating, ambience, lighting, cutlery, service, design has been impeccably well thought out. Even the washrooms were excellent! The food was AWESOME! This is surprising considering the fact we were there on a Saturday night & they almost had no specials. We were extremely well serviced too! Rare to find such finesse in Kenya! You must go visit them!",
+        reviewer: "Irfan Virji",
+        location: "KITSURU"
+      },
+      {
+        content: "Such a fantastic restaurant, I plan on being a regularhere. The food is amazing the atmosphere is so nice and the service isexceptional. I pray you are able to visit them at least once so you canunderstand what I'm saying. 10/10.Recommended dishes: Steakmust go visitthem!",
+        reviewer: " Paul Kamau",
+        location: " KITISURU"
+      },
+      {
+        content: "Best place to eat out. If you want to have a niceromantic date this place is perfect. The food is fantastic only be carefulcause the portions are bigger than you would expect.",
+        reviewer: "Vladimiro Stivali.",
+        location: "Westlands"
+      }
+    ];
+    
+    let current = 0;
+    
+    function updateReview(idx) {
+      document.getElementById('review-content').textContent = reviews[idx].content;
+      document.getElementById('reviewer').textContent = reviews[idx].reviewer;
+      document.getElementById('location').textContent = reviews[idx].location;
+    }
+    
+    document.getElementById('prev-review').onclick = function() {
+      current = (current - 1 + reviews.length) % reviews.length;
+      updateReview(current);
+    };
+    document.getElementById('next-review').onclick = function() {
+      current = (current + 1) % reviews.length;
+      updateReview(current);
+    };
+    </script>
+    
+
+</body>
+</html>
+

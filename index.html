@@ -1,44 +1,55 @@
-
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ankole Grill</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <title>Ankole Restaurant</title>
 </head>
 <body>
-
   <div class="slideshow">
-    <div class="slide s1"></div>
-    <div class="slide s2"></div>
-    <div class="slide s3"></div>
-    <div class="slide s4"></div>
-    <div class="slide s5"></div>
-    <div class="slide s6"></div>
+    <div class="slide active" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(78, 71, 71, 0.5)), url('https://i.pinimg.com/736x/3e/af/50/3eaf50b61fccccfad936d962c797c4dc.jpg');"><a href="index.html"><img class="ankolelogo" src="https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/65c0b0524cdc940f7455af22_logo.svg" alt="Ankole Grill Logo"></a></div>
+    <div class="slide" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.pinimg.com/736x/65/3b/18/653b18536e2a73569f14d132bf6b966a.jpg');"><a href="index.html"><img class="ankolelogo" src="https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/65c0b0524cdc940f7455af22_logo.svg" alt="Ankole Grill Logo"></a></div>
+    <div class="slide" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('https://i.pinimg.com/736x/e7/6f/1f/e76f1f51496bdc53985f34191e53b837.jpg');"><a href="index.html"><img  class="ankolelogo" src="https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/65c0b0524cdc940f7455af22_logo.svg" alt="Ankole Grill Logo"></a></div>
+    <div class="slide" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.pinimg.com/736x/82/19/c8/8219c86152b792070fd13e7b5201f89c.jpg');"><a href="index.html"><img class="ankolelogo" src="https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/65c0b0524cdc940f7455af22_logo.svg" alt="Ankole Grill Logo"></a></div>
+    <div class="slide" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.pinimg.com/736x/27/cd/09/27cd09b230516c18272babee35c5b033.jpg');"><a href="index.html"><img class="ankolelogo" src="https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/65c0b0524cdc940f7455af22_logo.svg" alt="Ankole Grill Logo"></a></div>
+    <div class="overlay" id="overlayText">discover</div>
   </div>
-
-  <div class="centered-text">
-    <h1>discover</h1>
-    <div class="logo"><a href="index.html"></a><img src="https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/65c0b0524cdc940f7455af22_logo.svg" alt="Ankole Logo"></a></div>
+ 
+  
+  <nav>
+  <a href="index.html">Home</a>
+  <a href="menu.html">Menu</a>
+  <a href="reviews.html">Reviews</a>
+  <a href="events.html">Events</a>
+  <a href="live.html">Live</a>
+  <a href="contact.html">Contacts</a>
+  <a href="reservation.html" id="reserve">Reservations</a>
+  <div class="nav-icons">
+    <a href="https://www.whatsapp.com/"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
   </div>
+</nav>
 
-  <nav class="nav-bar">
-    <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="menu.html">Menu</a></li>
-      <li><a href="#">Reviews</a></li>
-      <li><a href="events.html">Events</a></li>
-      <li><a href="live.html">Live</a></li>
-      <li><a href="contact.html">Contacts</a></li>
-      <li><a href="#" class="btn">Reservations</a></li>
-    </ul>
-    <div class="nav-icons">
-      <a href="https://www.whatsapp.com/"><i class="fab fa-whatsapp"></i></a>
-      <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-    </div>
-  </nav>
+ <script>
+    const slides = document.querySelectorAll('.slide');
+    const overlayText = document.getElementById('overlayText');
+    const words = ["Discover", "Enjoy", "Taste", "Experience", "Delight"];
+    let current = 0;
 
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === index) slide.classList.add('active');
+      });
+      overlayText.textContent = words[index];
+    }
+
+    setInterval(() => {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    }, 4000);
+  </script>
+  
 </body>
 </html>
